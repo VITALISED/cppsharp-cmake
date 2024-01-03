@@ -59,7 +59,7 @@ function(add_cppsharp_target target_name target_to_bind source output_namespace
             ${CPPSHARP_CLI_EXECUTABLE} ARGS ${source} ${TARGET_INCLUDES} -o
             ${output_file} --rtti --exceptions -a ${CPPSHARP_ARCH_STR}
             ${definitions} -on ${output_namespace}
-        DEPENDS skyscraper
+        DEPENDS ${target_to_bind}
         COMMENT "Generating C# bindings with CppSharp"
     )
 
